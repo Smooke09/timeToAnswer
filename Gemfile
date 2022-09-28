@@ -40,6 +40,9 @@ gem 'devise'
 gem 'rails-i18n', '~> 5.1'
 gem 'tty-spinner'
 gem 'faker'
+gem 'kaminari'
+gem 'kaminari-i18n'
+gem 'cocoon'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -54,8 +57,9 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'awesome_print'
-  gem 'kaminari'
-  gem 'kaminari-i18n'
+  gem 'rails_db', '2.3.0'
+ 
+
 end
 
 group :test do
