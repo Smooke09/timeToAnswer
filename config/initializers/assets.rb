@@ -21,6 +21,7 @@ Rails.application.config.assets.precompile += %w( admins_backoffice.js admins_ba
 Rails.application.config.assets.precompile += %w( sb-admin-2.js sb-admin-2.css
     custom.js custom.css
     img.png
+    img.jpg
     surface-fix.js surface-fix.css
     navbar.css )
 
