@@ -10,14 +10,17 @@
     <title>TimeToAnswer</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
     <%= stylesheet_link_tag    'application' %>
     <%= stylesheet_link_tag    'user_devise' %>
   </head>
 
   <body class="login">
     <%= yield %>
+
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'user_devise' %>
+
     <% if flash %>
         <% flash.each do |key, value| %>
           <%= javascript_tag do %>
@@ -31,9 +34,8 @@
         <% end %>
     <% end %>
 
-
     <% unless resource.errors.empty? %>
-        <% resource.errors.full_messages.each do |msg|%>
+        <% resource.errors.full_messages.each do |msg| %>
           <%= javascript_tag do %>
               $.bootstrapGrowl('<%= msg %>', {
               type: 'danger', // (null, 'info', 'danger', 'success')
@@ -44,6 +46,7 @@
           <% end %>
         <% end %>
     <% end %>
-
+    
   </body>
 </html>
+
