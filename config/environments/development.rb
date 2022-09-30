@@ -36,6 +36,20 @@ Rails.application.configure do
   # devise config 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  #mailtrap config
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :user_name => 'f60d4dc0a5832b',
+      :password => '686953949e6e91',
+      :address => 'smtp.mailtrap.io',
+      :domain => 'smtp.mailtrap.io',
+      :port => '2525',
+      :authentication => :cram_md5
+}
+
+
+
+
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
